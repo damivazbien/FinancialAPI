@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0-*",
+
+  "buildOptions": {
+    "preserveCompilationContext": true,
+    "debugType": "portable",
+    "copyToOutput": "setting.json"
+  },
+
+  "dependencies": {
+    "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
+    "dotnet-test-xunit": "1.0.0-rc2-*",
+    "Newtonsoft.Json":"9.0.2-beta1",
+    "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Configuration":"1.0.0-rc2-final",
+    "Microsoft.NETCore.App": {
+      "version": "1.0.0-rc2-3002702",
+      "type": "platform"
+    },
+    "xunit": "2.1.0-rc2-*",
+    "FinancialTimes.API":{
+      "target": "project"
+    }
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "dnxcore50",
+        "portable-net45+win8"
+      ]
+    }
+  },
+
+  "testRunner": "xunit",
+
+  "tooling": {
+    "defaultNamespace": "FinancialTimes.Test"
+  }
+}
