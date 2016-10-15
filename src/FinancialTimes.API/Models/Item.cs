@@ -1,5 +1,3 @@
-using System;
-
 namespace FinancialTimes.API.Models
 {
     public class Item
@@ -9,16 +7,4 @@ namespace FinancialTimes.API.Models
         
     }
     
-    // public static class ItemModelExtensions
-    // {
-    //     public static Item ModelToEntity(this ItemModel model)
-    //     {
-    //         var item = new Item{
-    //             Name = model.Name,
-    //             HowMuch = model.HowMuch
-    //         };
-     
-    //         return item;
-    //     }
-    // }
 }

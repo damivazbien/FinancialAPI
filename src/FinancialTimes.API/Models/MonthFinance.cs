@@ -1,7 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-
-
 namespace FinancialTimes.API.Models
 {
     public class MonthFinance : EntityBase
@@ -27,25 +23,5 @@ namespace FinancialTimes.API.Models
             this.Saving = saving;
         }
     }
-    
-    
-    // public static class MonthFinanceModelExtensions
-    // {
-    //     public static MonthFinance ToModelToEntity(this MonthFinanceModel model)
-    //     {
-    //         if(model == null)
-    //             return null;
-                
-    //         var monthFinance = new MonthFinance(
-    //            model.Name,
-    //            model.Expense.ToModelToEntity(),
-    //            model.Saving
-    //         );
-            
-    //         monthFinance.MonthEarning.ListItemsEarning = model.Earning.ToModelToEntity().ListItemsEarning;
-    //         monthFinance.Total = monthFinance.SubTotalEarning + monthFinance.SubTotalExpense; 
-            
-    //         return monthFinance;
-    //     }
-    // }
+   
 }
