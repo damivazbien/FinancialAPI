@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FinancialTimes.API.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -27,17 +28,18 @@ namespace FinancialTimes.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
-            services.AddMvc();
+            //Dependency Injection
+            services.AddTransient<IFinancialTimes, FinancialServices>();
             
             // Add functionality to inject IOptions<T>
             services.AddOptions();
             
-            // Add our Config object so it can be injected
-            services.Configure<Configurations.MySettings>(Configuration.GetSection("MySettings"));
-            
             // *If* you need access to generic IConfiguration this is **required**
             services.AddSingleton<IConfiguration>(Configuration);
+
+            // Add framework services.
+            services.AddMvc();
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

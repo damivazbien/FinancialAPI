@@ -47,5 +47,10 @@ namespace FinancialTimes.Test
         {
             throw new NotImplementedException();
         }
+
+        string IFinancialTimes.GetConfiguration()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -14,10 +14,9 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-final",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0-rc2-final",
-    "Newtonsoft.Json":"9.0.2-beta1"
+    "WindowsAzure.Storage": "7.0.2-preview"
   },
-
-  "tools": {
+ "tools": {
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": {
       "version": "1.0.0-preview1-final",
       "imports": "portable-net45+win8+dnxcore50"

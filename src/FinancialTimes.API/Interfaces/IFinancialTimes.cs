@@ -7,9 +7,10 @@ namespace FinancialTimes.API.Interfaces
 {
   public interface IFinancialTimes 
   { 
+      string GetConfiguration();
       Task<MonthFinance[]> Get();
-	    Task Persist(IEnumerable<MonthFinance> dashboards);
-		  Task Persist(MonthFinance dashboard);
-		  Task<MonthFinance[]> Remove(Guid dashboardId);
+	    Task Persist(IEnumerable<MonthFinance> monthFinance);
+		  Task Persist(MonthFinance monthFinance);
+		  Task<MonthFinance[]> Remove(Guid monthFinanceId);
   } 
 }
